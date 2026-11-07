@@ -1,0 +1,269 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UNIFIED DESIGN SYSTEM - LIGHT AESTHETIC
+   Foundation for all components and sections
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       COLOR PALETTE
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Primary Colors - Mauve (Brand) */
+    --color-primary: #83666e;
+    --color-primary-light: #9a7e86;
+    --color-primary-lighter: #b8a0a8;
+    --color-primary-dark: #6a4f56;
+    --color-primary-darker: #563d42;
+
+    /* Neutrals */
+    --color-text-primary: #2d2d2d;
+    --color-text-secondary: #666666;
+    --color-text-tertiary: #999999;
+    --color-text-inverse: #ffffff;
+
+    /* Backgrounds */
+    --color-bg-main: #ffffff;
+    --color-bg-light: #f9f8fa;
+    --color-bg-lighter: #f3f1f5;
+    --color-bg-overlay: rgba(255, 255, 255, 0.9);
+
+    /* Status Colors */
+    --color-success: #4ece00;
+    --color-success-light: #6bf22d;
+    --color-warning: #ff9500;
+    --color-error: #ff4444;
+    --color-info: #3498db;
+
+    /* Category Accent Colors (for product categories) */
+    --color-category-pink: #ff6b9d;
+    --color-category-teal: #4ecdc4;
+    --color-category-purple: #8b6bb1;
+    --color-category-coral: #ff6b6b;
+    --color-category-gold: #ffa500;
+
+    /* Borders & Dividers */
+    --color-border-light: #e8e6eb;
+    --color-border-medium: #d4d2d7;
+    --color-border-dark: #9a9a9a;
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       TYPOGRAPHY SCALE
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Font Families */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Font Sizes */
+    --text-h1: 3.5rem;     /* 56px */
+    --text-h2: 2.5rem;     /* 40px */
+    --text-h3: 1.75rem;    /* 28px */
+    --text-h4: 1.5rem;     /* 24px */
+    --text-body: 1rem;     /* 16px */
+    --text-body-sm: 0.95rem; /* 15px */
+    --text-small: 0.875rem; /* 14px */
+    --text-xsmall: 0.8rem; /* 13px */
+    --text-label: 0.75rem; /* 12px */
+
+    /* Font Weights */
+    --weight-light: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Line Heights */
+    --line-height-tight: 1.1;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.7;
+
+    /* Letter Spacing */
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.5px;
+    --letter-spacing-wider: 1px;
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SPACING SCALE
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    --spacing-xs: 4px;      /* 1/4 rem */
+    --spacing-sm: 8px;      /* 1/2 rem */
+    --spacing-md: 16px;     /* 1 rem */
+    --spacing-lg: 24px;     /* 1.5 rem */
+    --spacing-xl: 32px;     /* 2 rem */
+    --spacing-2xl: 48px;    /* 3 rem */
+    --spacing-3xl: 64px;    /* 4 rem */
+    --spacing-4xl: 96px;    /* 6 rem */
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       BORDER RADIUS SCALE
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 50%;
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       SHADOW/ELEVATION SYSTEM
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    --shadow-none: none;
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px 0 rgba(131, 102, 110, 0.08);
+    --shadow-lg: 0 12px 32px 0 rgba(131, 102, 110, 0.12);
+    --shadow-xl: 0 20px 60px 0 rgba(131, 102, 110, 0.15);
+    --shadow-2xl: 0 30px 80px 0 rgba(131, 102, 110, 0.2);
+
+    --shadow-inset: inset 0 2px 8px 0 rgba(131, 102, 110, 0.1);
+    --shadow-glass: 0 8px 32px 0 rgba(131, 102, 110, 0.1);
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       ANIMATION & TRANSITIONS
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    --transition-fast: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-standard: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-slow: all 0.6s ease-out;
+
+    --ease-in-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+    --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-in: cubic-bezier(0.42, 0, 0.58, 1);
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       BREAKPOINTS
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    --breakpoint-sm: 480px;   /* Mobile */
+    --breakpoint-md: 768px;   /* Tablet */
+    --breakpoint-lg: 1024px;  /* Desktop */
+    --breakpoint-xl: 1440px;  /* Large Desktop */
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   GLOBAL RESET & BASE STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans), var(--font-fallback);
+    color: var(--color-text-primary);
+    background: var(--color-bg-main);
+    line-height: var(--line-height-normal);
+    overflow-x: hidden;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: var(--weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: -0.5px;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: var(--text-h1);
+}
+
+h2 {
+    font-size: var(--text-h2);
+}
+
+h3 {
+    font-size: var(--text-h3);
+}
+
+h4 {
+    font-size: var(--text-h4);
+}
+
+p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Links */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--color-text-inverse);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.mt-0 { margin-top: 0; }
+.mt-xs { margin-top: var(--spacing-xs); }
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+.mt-2xl { margin-top: var(--spacing-2xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-xs { margin-bottom: var(--spacing-xs); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+.mb-2xl { margin-bottom: var(--spacing-2xl); }
+
+.py-lg {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+}
+
+.py-xl {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+}
+
+.gap-md { gap: var(--spacing-lg); }
+.gap-lg { gap: var(--spacing-2xl); }
+.gap-xl { gap: var(--spacing-3xl); }

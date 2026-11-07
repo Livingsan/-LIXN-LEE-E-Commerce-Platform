@@ -1,0 +1,222 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HERO SECTION - REPLICA
+   Modern, elegant, right-aligned text with glassmorphism benefits
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.premium-hero {
+    position: relative;
+    margin-top: 0;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-premium-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 650px;
+    padding: 40px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-main-alignment {
+    display: flex;
+    justify-content: center; /* Center the entire text block in the hero section */
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero-text-section {
+    max-width: 650px;
+    width: 100%;
+    text-align: center; /* Center the text to match the central alignment */
+    padding: 0 20px;
+}
+
+.hero-title-premium-new {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--nav-dark);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle-premium-new {
+    font-size: 1.05rem;
+    color: var(--nav-dark);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.hero-buttons-new {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center; /* Center the buttons below the text */
+}
+
+.btn-primary-hero-new {
+    background: var(--nav-mauve);
+    color: var(--nav-bg);
+    border: none;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-hero-new:hover {
+    background: var(--nav-dark);
+}
+
+.btn-secondary-hero-new {
+    background: rgba(0, 0, 0, 0.08); /* translucent greyish like the reference image */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--nav-dark);
+    border: none;
+    padding: 14px 36px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-hero-new:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Glassmorphism benefits bar */
+.hero-glass-benefits-new {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.35); /* semi-transparent white */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 24px 40px;
+    width: 100%;
+}
+
+.benefit-glass-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Make all 3 blocks uniformly centered between dividers */
+    gap: 16px;
+    flex: 1;
+}
+
+.benefit-text-white {
+    text-align: left; /* Ensure the text next to the icon is perfectly left-aligned */
+}
+
+.benefit-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+.benefit-icon-mauve {
+    width: 44px;
+    height: 44px;
+    background: var(--nav-mauve);
+    color: var(--nav-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.benefit-text-white strong {
+    display: block;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.benefit-text-white span {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE MOBILE HERO
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+@media (max-width: 1024px) {
+    .hero-title-premium-new { font-size: 2.8rem; }
+    .hero-glass-benefits-new { padding: 20px; }
+}
+
+@media (max-width: 768px) {
+    .premium-hero { min-height: auto; }
+    .hero-premium-content { padding: 60px 20px; min-height: auto; }
+    .hero-main-alignment { justify-content: center; margin-bottom: 40px; }
+    .hero-text-section { max-width: 100%; text-align: center; }
+    .hero-buttons-new { justify-content: center; flex-wrap: wrap; }
+    .hero-glass-benefits-new {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px;
+        border-radius: 16px;
+    }
+    .benefit-glass-item {
+        justify-content: flex-start; /* Left align on mobile for a clean stack */
+        width: 100%;
+    }
+    .benefit-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-primary-hero-new, .btn-secondary-hero-new { width: 100%; }
+    .hero-title-premium-new { font-size: 2.2rem; }
+}

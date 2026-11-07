@@ -1,0 +1,54 @@
+# Local configuration and environment secrets
+config.php
+config.local.php
+.env
+.env.*
+.env.local
+!.env.example
+!config.example.php
+!config.sample.php
+
+# Database exports, backups, and dumps
+DB/
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.backup
+
+# Uploads directory contents (preserve folder structure if needed)
+# uploaded_img/*
+# !uploaded_img/.gitkeep
+
+# IDE / editor files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / temp files
+*.log
+*.tmp
+*.temp
+
+# Dependency folders
+vendor/
+node_modules/
+
+# Test / cache / runtime
+coverage/
+.phpunit.result.cache
+*.cache
+
+# Archive files
+*.zip
+*.rar
+*.7z

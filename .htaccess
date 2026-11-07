@@ -1,0 +1,40 @@
+# Apache Security Hardening for LIXNLEE eCommerce
+
+# Disable directory listing
+Options -Indexes
+
+# Protect sensitive files and directories
+<FilesMatch "^(\.env|\.git|config\.php|config\.sample\.php|create_admin\.php|\.htaccess|\.gitignore|composer\.(json|lock)|package\.(json|lock))$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Deny,Allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block access to SQL dumps and backups
+<FilesMatch "(?i)\.(sql|sqlite|sqlite3|bak|backup|log|ini|sh|dist)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Deny,Allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Block access to DB folder
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^DB/ - [F,L]
+</IfModule>
+
+# Security Headers (if headers module is active)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
